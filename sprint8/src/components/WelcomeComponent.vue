@@ -1,13 +1,18 @@
 <template>
     <h1>Star Wars</h1>
+    <ListItem></ListItem>
 </template>
 
 <script>
-// import { defineComponent } from '@vue/composition-api'
+import ListItem from './ListItem.vue'
 
 export default {
-    name: "WelcomeComponent"
+    name: "WelcomeComponent", 
+    components: {
+        ListItem
+    }
 }
+
 </script>
 
 <style lang="css" scoped>
