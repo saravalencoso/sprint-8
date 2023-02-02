@@ -35,3 +35,16 @@ export default {
     
 }
 </script>
+
+<style lang="css" scoped>
+    div {
+        border: 1px solid #C5C5C5;
+        padding: 10px;
+        margin: 10px;
+    }
+    h2, p {
+        text-align: left;
+        color: #C5C5C5;
+        margin: 0;
+    }
+</style>

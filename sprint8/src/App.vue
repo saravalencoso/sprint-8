@@ -1,5 +1,6 @@
 <template>
-    <div id="container">
+    <div class="container">
+      <img src="\src\img\sw_logo.png" alt="Star Wars Logo">
       <!-- <router-view></router-view> -->
       <welcomeComponent></welcomeComponent>
     </div>
@@ -18,4 +19,7 @@ export default {
 </script>
 
 <style scoped>
+  .container {
+    background-color: black;
+  }
 </style>
