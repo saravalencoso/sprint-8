@@ -18,8 +18,9 @@ export default {
 
 </script>
 
-<style scoped>
-  .container {
+<style>
+  #app {
+    width: 100%;
     background-color: black;
   }
 </style>

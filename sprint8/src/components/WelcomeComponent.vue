@@ -43,5 +43,6 @@ export default {
         border-right: 1px solid #C5C5C5;
         border-left: 1px solid #C5C5C5;
         margin-top: 0;
+        width: 25%;
     }
 </style>
