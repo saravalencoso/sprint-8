@@ -15,9 +15,20 @@ export default {
     name: "WelcomeComponent", 
     components: {
         ListItem
+    }, 
+    data() {
+        return {
+            amigo:''
+        }
+    }, 
+    methods: {
+        addAmigo() {
+            this.$store.state.amigo = this.amigo;
+            this.$store.dispatch('addAmigoAction');
+            this.amigo = '';
+        }
     }
 }
-
 </script>
 
 <style lang="css" scoped>
