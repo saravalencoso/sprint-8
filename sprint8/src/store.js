@@ -5,12 +5,10 @@ import axios from 'axios'
 export default createStore({
   state: {
     results: [], 
-    next: 'https://swapi.dev/api/starships/'
+    next: 'https://swapi.dev/api/starships/', 
+    details: ""
   },
   mutations: {
-    agregarAmigo(state) {
-      state.amigos = [state.amigo, ...state.amigos]
-    }, 
     updateResults(state, results) {
       state.results = state.results.concat(results);
     },

@@ -1,19 +1,18 @@
 <template>
     <div class="container">
       <img src="\src\img\sw_logo.png" alt="Star Wars Logo">
-      <!-- <router-view></router-view> -->
-      <welcomeComponent></welcomeComponent>
     </div>
+    <router-view></router-view>
 </template>
 
 <script>
 
-import WelcomeComponent from './components/WelcomeComponent.vue';
 export default {
   name: 'App', 
-  components: {
-    WelcomeComponent
-  }
+// The `mounted` lifecycle hook is called when the component is mounted to the DOM 
+    mounted() {
+        this.$store.dispatch('getSpaceship', this.$store.state.next);
+    }
 }
 
 </script>

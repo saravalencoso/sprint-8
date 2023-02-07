@@ -2,6 +2,7 @@
     <div v-for="result in $store.state.results" :key="result.name">
         <h2> {{ result.name }} </h2>
         <p> {{ result.model }} </p>
+        <router-link :to="`/details/${slugify(result.name)}`">Detalls</router-link>
     </div>
     <button @click="nextPageApi($store.state.next)">Mostra'n més</button>
 </template>
@@ -9,14 +10,27 @@
 <script>
 // mover a WelcomeComponent y pasarlo a ListItem
 
-export default { // local registration for this component
+export default { 
+    // Local registration for this component
     name: "ListItem", 
-    mounted() {
-        this.$store.dispatch('getSpaceship', this.$store.state.next);
-    }, 
     methods: {
         nextPageApi() {
             this.$store.dispatch('getSpaceship', this.$store.state.next);
+        }, 
+        openDetails(result) {
+            this.$store.state.details = result;
+            console.log(this.$store.state.details)
+        }, 
+        slugify(name) {
+            return name
+            .toString()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w-]+/g, '')
+            .replace(/--+/g, '-')
         }
     }
 }
