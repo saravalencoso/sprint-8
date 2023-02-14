@@ -6,7 +6,7 @@ export default createStore({
   state: {
     results: [], 
     next: 'https://swapi.dev/api/starships/', 
-    details: ""
+    details: {}
   },
   mutations: {
     updateResults(state, results) {
@@ -14,27 +14,35 @@ export default createStore({
     },
     updateNext(state, next) {
       state.next = next;
+    }, 
+    createCard(state, details) {
+      state.details = details;
     }
   },
   actions: {
-    addAmigoAction(context) {
-        context.commit('agregarAmigo');
-    },
     async getSpaceship(context, url) {
       // dispatches a commit to update the state with the new results and next URL
-        try {
-            // Biblioteca Axios para realizar una solicitud HTTP GET asíncrona
-            const response = await axios.get(url);
+      try {
+          // Biblioteca Axios para realizar una solicitud HTTP GET asíncrona
+          const response = await axios.get(url);
 
-            // Si la solicitud es exitosa, los resultados de la respuesta se concatenan 
-            context.commit('updateResults', response.data.results);
-            
-            // Almacena la URL de la siguiente página 
-            context.commit('updateNext', response.data.next);
+          // Si la solicitud es exitosa, los resultados de la respuesta se concatenan 
+          context.commit('updateResults', response.data.results);
+          
+          // Almacena la URL de la siguiente página 
+          context.commit('updateNext', response.data.next);
 
-        } catch (error) {
-            console.error(error);
-        }
+      } catch (error) {
+          console.error(error);
+      }
+    }, 
+    async getDetails(context, url) {
+      try {
+        const response = await axios.get(url);
+        context.commit('createCard', response.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
   }
 });

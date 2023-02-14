@@ -9,10 +9,10 @@
 
 export default {
   name: 'App', 
-// The `mounted` lifecycle hook is called when the component is mounted to the DOM 
-    mounted() {
-        this.$store.dispatch('getSpaceship', this.$store.state.next);
-    }
+  // The `mounted` lifecycle hook is called when the component is mounted to the DOM 
+  mounted() {
+    this.$store.dispatch('getSpaceship', this.$store.state.next);
+  }
 }
 
 </script>

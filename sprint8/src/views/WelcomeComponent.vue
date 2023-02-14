@@ -9,25 +9,13 @@
 </template>
 
 <script>
-import ListItem from "./ListItem.vue";
+import ListItem from "../components/ListItem.vue";
 
 export default {
   name: "WelcomeComponent",
   components: {
-    ListItem,
-  },
-  data() {
-    return {
-      amigo: "",
-    };
-  },
-  methods: {
-    addAmigo() {
-      this.$store.state.amigo = this.amigo;
-      this.$store.dispatch("addAmigoAction");
-      this.amigo = "";
-    },
-  },
+    ListItem
+  }
 };
 </script>
 

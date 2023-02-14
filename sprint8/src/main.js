@@ -8,8 +8,10 @@ import App from "./App.vue";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
-import WelcomeComponent from "./components/WelcomeComponent.vue";
-import SpaceshipCard from "./components/SpaceshipCard.vue";
+import WelcomeComponent from "./views/WelcomeComponent.vue";
+import SpaceshipCard from "./views/SpaceshipCard.vue";
+import Register from './views/Register.vue'
+import Login from './views/Login.vue'
 
 const routes = [
   {
@@ -19,6 +21,14 @@ const routes = [
   {
     path: "/details/:name",
     component: SpaceshipCard
+  },
+  {
+    path: "/register",
+    component: Register
+  },
+  {
+    path: "/login",
+    component: Login
   }
 ];
 
