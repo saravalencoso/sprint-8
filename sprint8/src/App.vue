@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'App', 
   // The `mounted` lifecycle hook is called when the component is mounted to the DOM 

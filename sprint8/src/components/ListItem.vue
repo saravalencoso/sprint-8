@@ -1,10 +1,24 @@
 <template>
+    <nav>
+    <ul>
+      <router-link to="/">
+        <li>HOME</li>
+      </router-link>
+      <li>STARSHIPS</li>
+      <router-link to="/login">
+        <li>LOG IN</li>
+      </router-link>
+      <router-link to="/register">
+        <li>REGISTER</li>
+      </router-link>
+    </ul>
+  </nav>
   <div v-for="result in $store.state.results" :key="result.name">
     <h2>{{ result.name }}</h2>
     <p>{{ result.model }}</p>
-    <router-link :to="`/details/${getId(result.url)}`">Detalls</router-link>
+    <router-link :to="`/details/${getId(result.url)}`" class="detailsLink">Detalls</router-link>
   </div>
-  <button @click="nextPageApi($store.state.next, result.id)">
+  <button @click="nextPageApi($store.state.next)">
     Mostra'n més
   </button>
 </template>
@@ -27,13 +41,15 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 div {
   border: 1px solid #c5c5c5;
   padding: 10px;
   margin: 10px;
 }
 h2,
-p {
+p,
+.detailsLink {
   text-align: left;
   color: #c5c5c5;
   margin: 0;

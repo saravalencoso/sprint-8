@@ -1,4 +1,18 @@
 <template>
+  <nav>
+    <ul>
+      <router-link to="/">
+        <li>HOME</li>
+      </router-link>
+      <router-link to="/details">
+        <li>STARSHIPS</li>
+      </router-link>
+      <router-link to="/login">
+        <li>LOG IN</li>
+      </router-link>
+      <li>REGISTER</li>
+    </ul>
+  </nav>
   <form @submit.prevent="register">
     <h1>Register</h1>
     <input type="text" placeholder="Username" v-model="username" required/>

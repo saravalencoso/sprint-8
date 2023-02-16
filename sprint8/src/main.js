@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import WelcomeComponent from "./views/WelcomeComponent.vue";
 import SpaceshipCard from "./views/SpaceshipCard.vue";
+import ListItem from "./components/ListItem.vue";
 import Register from './views/Register.vue'
 import Login from './views/Login.vue'
 
@@ -17,6 +18,10 @@ const routes = [
   {
     path: "/",
     component: WelcomeComponent,
+  },
+  {
+    path: "/details/",
+    component: ListItem
   },
   {
     path: "/details/:name",
