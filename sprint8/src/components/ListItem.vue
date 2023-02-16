@@ -4,7 +4,7 @@
       <router-link to="/">
         <li>HOME</li>
       </router-link>
-      <li>STARSHIPS</li>
+      <li class="active">STARSHIPS</li>
       <router-link to="/login">
         <li>LOG IN</li>
       </router-link>

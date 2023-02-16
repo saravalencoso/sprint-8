@@ -7,7 +7,7 @@
       <router-link to="/details">
         <li>STARSHIPS</li>
       </router-link>
-      <li>LOG IN</li>
+      <li class="active">LOG IN</li>
       <router-link to="/register">
         <li>REGISTER</li>
       </router-link>

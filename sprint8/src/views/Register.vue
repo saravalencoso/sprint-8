@@ -10,7 +10,7 @@
       <router-link to="/login">
         <li>LOG IN</li>
       </router-link>
-      <li>REGISTER</li>
+      <li class="active">REGISTER</li>
     </ul>
   </nav>
   <form @submit.prevent="register">
@@ -37,3 +37,11 @@ export default {
     }
 }
 </script>
+
+<style lang="css">
+input {
+    margin: auto;
+    display: block;
+    width: 40%;
+}
+</style>
