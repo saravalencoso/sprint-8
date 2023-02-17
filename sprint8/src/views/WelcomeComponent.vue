@@ -35,6 +35,10 @@ h1 {
   color: white;
 }
 
+h2 {
+  color: #c5c5c5;
+}
+
 img {
   width: 40%;
   margin: 10px;

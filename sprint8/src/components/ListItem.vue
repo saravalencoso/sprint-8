@@ -47,6 +47,7 @@ div {
   padding: 10px;
   margin: 10px;
 }
+
 h2,
 p,
 .detailsLink {

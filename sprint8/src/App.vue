@@ -20,5 +20,11 @@ export default {
   #app {
     width: 100%;
     background-color: black;
+    padding: 0 0 30px 0;
   }
+
+  .container {
+    background-image: url(./img/containerBG.jpg);
+  }
+
 </style>
